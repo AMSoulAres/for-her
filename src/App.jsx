@@ -24,11 +24,11 @@ const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [timeTogether, setTimeTogether] = useState({
-    months: 0,
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    meses: 0,
+    dias: 0,
+    horas: 0,
+    minutos: 0,
+    segundos: 0,
   });
 
   // Set your anniversary date here
@@ -39,19 +39,19 @@ const App = () => {
       const now = new Date();
       const difference = now.getTime() - anniversaryDate.getTime();
 
-      const months = Math.floor(
+      const meses = Math.floor(
         (difference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
       );
-      const days = Math.floor(
+      const dias = Math.floor(
         (difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
       );
-      const hours = Math.floor(
+      const horas = Math.floor(
         (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      const minutos = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((difference % (1000 * 60)) / 1000);
 
-      setTimeTogether({ months, days, hours, minutes, seconds });
+      setTimeTogether({ meses, dias, horas, minutos, segundos });
     }, 1000);
 
     return () => clearInterval(timer);
@@ -60,7 +60,8 @@ const App = () => {
   const handleNoHover = () => {
     const btnNao = document.querySelector("#btn-nao");
     btnNao.style.position = "absolute";
-    const newX = Math.random() * window.innerWidth - 100;
+    var randomX = Math.random() * window.innerWidth - 120
+    const newX = randomX > 100 ? randomX : 20;
     const newY = Math.round(Math.random() * (2100 - 1600)) + 1600;
     setNoButtonPosition({ x: newX, y: newY });
   };
@@ -81,7 +82,7 @@ const App = () => {
           Nosso cantinho
           <Heart className="ml-2 text-[#FF8FA3]" fill="#FF8FA3" />
         </h1>
-        <p className="text-xl text-[#674846]">Vendo tudo que já vivemos...</p>
+        <p className="text-xl text-[#674846]">Memórias pra nossa vida</p>
       </div>
 
       {/* Photo Gallery */}
@@ -89,31 +90,28 @@ const App = () => {
         <div className="bg-[#FF6F77] p-4 rounded-lg shadow-lg">
           <img
             src={tonguePic}
-            alt="Our First Date"
             className="w-full h-fit object-cover rounded-lg mb-4"
           />
-          <p className="text-center text-[#4A1D1F] font-medium">
-            Our First Date
+          <p className="text-center text-[#4A1D1F] font-medium text-xl">
+            Amo sua companhia
           </p>
         </div>
         <div className="bg-[#FF6F77] p-4 rounded-lg shadow-lg">
           <img
             src={roofPic}
-            alt="Favorite Memory"
             className="w-full h-fit object-cover rounded-lg mb-4"
           />
-          <p className="text-center text-[#4A1D1F] font-medium">
-            Our Favorite Memory
+          <p className="text-center text-[#4A1D1F] font-medium text-xl">
+            Amo sua risada
           </p>
         </div>
         <div className="bg-[#FF6F77] p-4 rounded-lg shadow-lg">
           <img
             src={sunsetPic}
-            alt="Our First Date"
             className="w-full h-fit object-cover rounded-lg mb-4"
           />
-          <p className="text-center text-[#4A1D1F] font-medium">
-            Our First Date
+          <p className="text-center text-[#4A1D1F] font-medium text-xl">
+            Amo seu sorriso
           </p>
         </div>
         <div className="bg-[#FF6F77] p-4 rounded-lg shadow-lg">
@@ -122,8 +120,8 @@ const App = () => {
             alt="Favorite Memory"
             className="w-full h-fit object-cover rounded-lg mb-4"
           />
-          <p className="text-center text-[#4A1D1F] font-medium">
-            Our Favorite Memory
+          <p className="text-center text-[#4A1D1F] font-medium text-xl">
+            Amo estar com você
           </p>
         </div>
       </div>
@@ -151,19 +149,20 @@ const App = () => {
 
       {/* Love Note */}
       <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-2xl">
-        <h2 className="text-2xl font-bold text-[#4A1D1F] mb-4 text-center">
-          bla bla bla
-        </h2>
-        <p className="text-[#674846] text-center italic">
-          "Cada momento ao seu lado tem sido especial. Sua presença ilumina meus
-          dias e faz meu coração sorrir."
+        <p className="text-[#674846] text-center italic text-lg">
+          Meu bem, viver cada dia com você tem tornado meus dias melhores, deixado o mundo mais vivo e mais bonito.
+          Todos os dias me apaixono mais por você, seu jeito, seu olhar, sua forma de pensar.
+          Nunca canso de pensar em você, de te admirar, de estar com você.
+          Quero continuar construindo memórias incríveis ao seu lado.
+          <br />
+          <strong>Eu te amo!</strong>
         </p>
       </div>
 
       {/* The Question */}
       <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-2xl text-center mt-12">
         <h2 className="text-3xl font-bold text-[#4A1D1F] mb-8">
-          Quer Namorar Comigo?
+          Quer namorar comigo?
         </h2>
         <div className="flex justify-center gap-8">
           <button

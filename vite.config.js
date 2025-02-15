@@ -8,4 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: "/for-her",
+  server: {
+    mimeTypes: {
+      'application/javascript': ['js'],
+    },
+  },
 })
