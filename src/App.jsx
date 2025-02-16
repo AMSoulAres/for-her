@@ -88,19 +88,19 @@ const App = () => {
       {/* Photo Gallery */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 w-full max-w-4xl'>
         <div className='bg-[#FF6F77] p-4 rounded-lg shadow-lg'>
-          <img alt='tonguePic' src={tonguePic} className='w-full h-fit object-cover rounded-lg mb-4' />
+          <img alt='tonguePic' src={tonguePic} className='w-full h-fit object-cover rounded-lg mb-4' style={{ aspectRatio: '9/16' }} />
           <p className='text-center text-[#4A1D1F] font-medium text-xl'>Amo sua companhia</p>
         </div>
         <div className='bg-[#FF6F77] p-4 rounded-lg shadow-lg'>
-          <img alt='roofPic' src={roofPic} className='w-full h-fit object-cover rounded-lg mb-4' />
+          <img alt='roofPic' src={roofPic} className='w-full h-fit object-cover rounded-lg mb-4' style={{ aspectRatio: '9/16' }} />
           <p className='text-center text-[#4A1D1F] font-medium text-xl'>Amo sua risada</p>
         </div>
         <div className='bg-[#FF6F77] p-4 rounded-lg shadow-lg'>
-          <img alt='sunsetPic' src={sunsetPic} className='w-full h-fit object-cover rounded-lg mb-4' />
+          <img alt='sunsetPic' src={sunsetPic} className='w-full h-fit object-cover rounded-lg mb-4' style={{ aspectRatio: '9/16' }} />
           <p className='text-center text-[#4A1D1F] font-medium text-xl'>Amo seu sorriso</p>
         </div>
         <div className='bg-[#FF6F77] p-4 rounded-lg shadow-lg'>
-          <img alt='Favorite Memory' src={parkPic} className='w-full h-fit object-cover rounded-lg mb-4' />
+          <img alt='Favorite Memory' src={parkPic} className='w-full h-fit object-cover rounded-lg mb-4' style={{ aspectRatio: '9/16' }} />
           <p className='text-center text-[#4A1D1F] font-medium text-xl'>Amo estar com você</p>
         </div>
       </div>
