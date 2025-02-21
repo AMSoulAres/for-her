@@ -174,7 +174,7 @@ const App = () => {
               &times;
             </button>
             <img src={churros} alt='Modal Content' className='w-fit h-fit object-cover rounded-lg mb-2' />
-            <p className='text-center text-[#4A1D1F] text-2xl'>É nois viu 👍</p>
+            <p className='text-center text-[#4A1D1F] text-2xl'>Prometo ser o melhor namorado do mundo ❤️</p>
           </div>
         </div>
       )}
