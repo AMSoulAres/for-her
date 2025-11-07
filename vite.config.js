@@ -8,7 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/for-her",
+  // Ao publicar em raiz (ex.: http://localhost:8080/) usamos base "/".
+  // Antes estava "/for-her", o que fazia os assets serem referenciados em
+  // /for-her/..., causando 404 quando o servidor servia na raiz.
+  base: "/",
   server: {
     mimeTypes: {
       'application/javascript': ['js'],

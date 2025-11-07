@@ -22,7 +22,7 @@ RUN npm run build
 FROM nginx:1.29
 
 # Copia os arquivos construídos (da pasta 'dist') para a pasta padrão do Nginx
-COPY --from=build /src/dist /usr/share/nginx/html
+COPY --from=build /src/dist/. /usr/share/nginx/html/
 
 # Expõe a porta 80 (padrão do Nginx)
 EXPOSE 80
