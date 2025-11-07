@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  for-her:
+    image: ghcr.io/amsoulares/for-her:latest
+    container_name: for-her
+    ports:
+      - "8090:80"
+    restart: unless-stopped
