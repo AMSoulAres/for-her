@@ -1,0 +1,32 @@
+/* Scoped styles for AfterAnniversary page */
+.after-root {
+  color-scheme: dark;
+}
+
+.after-root body,
+.after-root {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 163, 214, 0.18), rgba(32, 6, 46, 0)) no-repeat,
+    linear-gradient(135deg, #120331 0%, #2e0f4a 38%, #5c1d6f 65%, #ee67b8 100%);
+  color: #f9f6ff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.after-root #root {
+  min-height: 100vh;
+}
+
+.after-root h1,
+.after-root h2,
+.after-root h3,
+.after-root h4 {
+  font-family: "Playfair Display", "Times New Roman", serif;
+}
+
+.after-root ::selection {
+  background-color: rgba(236, 72, 153, 0.4);
+  color: #ffffff;
+}
