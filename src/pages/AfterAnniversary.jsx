@@ -2,9 +2,10 @@ import { Clock, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import "./AfterAnniversary.css";
 import beach from "../assets/pics/RJ2.jpg";
+import beach2 from "../assets/pics/beach.jpeg";
 import bedPic from "../assets/pics/bed.jpg";
-import bedKiss from "../assets/pics/bedKiss.jpg";
 import showLagumPic from "../assets/pics/show_lagum.jpg";
+import miranhas from "../assets/pics/miranhas.jpeg";
 
 import moment from "moment";
 
@@ -87,8 +88,8 @@ const AfterAnniversary = () => {
       aspectRatio: "9/13",
     },
     {
-      src: bedKiss,
-      caption: "Amo seu carinho",
+      src: beach2,
+      caption: "Amo sua risada",
       aspectRatio: "9/13",
     },
     {
@@ -105,14 +106,14 @@ const AfterAnniversary = () => {
 
   const activePhotos = afterAnniversaryPhotos;
 
-  const highlightPhoto = afterAnniversaryPhotos[0];
+  const highlightPhoto = miranhas;
 
   const timelineContent = {
     title: "Tempo te namorando!",
     subheading: "Cada segundo contigo é um presente.",
     data: timeDating,
     message:
-      "Ficar conversando até dormir, acordar com seu bom dia, viajar, perder a noção do tempo, cuidar da nossa fazendinha, assistir séries e filmes juntinhos, planejar nosso futuro, andar de bicicleta, ir em shows, se entediar... Tudo isso é tão especial pra mim porque é com você. Cada momento ao seu lado é especial e cada sorriso seu ilumina meu dia. Esse ano com você com certeza mudou minha vida para melhor e eu quero continuar vivendo essa aventura ao seu lado. Quero estar com você em todos os momentos, celebrar suas conquistas, apoiar seus sonhos e construir nosso futuro juntos. Você é meu tudo, a luz da minha vida, o motivo de eu sorrir à toa, meu amor pra vida toda.",
+      "Ficar conversando até dormir, acordar com seu bom dia, viajar, perder a noção do tempo, cuidar da nossa fazendinha, tomar um vinho, planejar nosso futuro, andar de bicicleta, ir em shows, se entediar... Tudo isso é tão especial pra mim porque é com você. Cada momento ao seu lado é especial e cada sorriso seu ilumina meu dia. Esse ano com você com certeza mudou minha vida para melhor e eu quero continuar vivendo essa aventura ao seu lado. Quero estar com você em todos os momentos, celebrar suas conquistas, apoiar seus sonhos e construir nosso futuro juntos. Você é meu tudo, a luz da minha vida, o motivo de eu sorrir à toa, meu amor pra vida toda.",
     footnote: "Eu te amo!",
   };
 
@@ -310,13 +311,12 @@ const AfterAnniversary = () => {
               <div className="flex flex-col items-center gap-4 text-center">
                 <div className="overflow-hidden rounded-2xl border border-rose-200/60 bg-white p-3 shadow-lg">
                   <img
-                    src={highlightPhoto.src}
-                    alt={highlightPhoto.alt}
+                    src={highlightPhoto}
                     className="h-48 w-48 rounded-2xl object-cover"
                   />
                 </div>
                 <p className="text-base leading-relaxed text-rose-800">
-                  Prometo ser o melhor namorado do mundo ❤️
+                  Prometo fazer meu melhor pra te fazer feliz! ❤️
                 </p>
                 <p className="text-sm text-rose-500">
                   Fazendo memórias juntos pra sempre.

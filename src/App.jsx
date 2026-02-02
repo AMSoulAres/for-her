@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import AfterAnniversary from "./pages/AfterAnniversary";
 import BeforeAnniversary from "./pages/BeforeAnniversary";
 
-const ANNIVERSARY_DATE_ISO = "2025-02-28T08:00:00";
+const ANNIVERSARY_DATE_ISO = "2025-02-28T00:00:00";
 
 const App = () => {
   const [hasOneYearPassed, setHasOneYearPassed] = useState(() =>
