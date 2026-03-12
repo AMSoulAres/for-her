@@ -34,7 +34,7 @@ const SECTION_BADGE_CLASS =
 const QUESTION_CARD_CLASS =
   "bg-white/10 border border-white/20 rounded-3xl px-8 py-10 text-center shadow-[0_20px_60px_rgba(10,3,24,0.5)] backdrop-blur-2xl";
 
-const AfterAnniversary = () => {
+const AfterAnniversary = ({ onToggle }) => {
   // start with (0,0) so left/top exist but the button remains in-flow until we set DOM position
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -180,7 +180,10 @@ const AfterAnniversary = () => {
           className="z-10 relative flex w-full max-w-6xl flex-col items-center gap-12"
         >
           <header className="flex flex-col items-center gap-5 text-center">
-            <span className={SECTION_BADGE_CLASS}>
+            <button
+              onClick={onToggle}
+              className={`${SECTION_BADGE_CLASS} cursor-pointer transition-all hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-200/50`}
+            >
               <Heart
                 width={20}
                 height={20}
@@ -188,7 +191,7 @@ const AfterAnniversary = () => {
                 fill="currentColor"
               />
               DESDE 2024
-            </span>
+            </button>
             <h1 className="text-4xl font-semibold leading-tight text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
               Nosso cantinho
             </h1>

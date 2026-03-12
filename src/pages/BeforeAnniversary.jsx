@@ -35,7 +35,7 @@ const SECTION_BADGE_CLASS =
 const QUESTION_CARD_CLASS =
   "bg-white/10 border border-white/20 rounded-3xl px-8 py-10 text-center shadow-[0_20px_60px_rgba(10,3,24,0.5)] backdrop-blur-2xl";
 
-const BeforeAnniversary = () => {
+const BeforeAnniversary = ({ onToggle }) => {
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [timeTogether, setTimeTogether] = useState(() => ({ ...ZERO_DIFF }));
@@ -81,29 +81,6 @@ const BeforeAnniversary = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const beforeAnniversaryPhotos = [
-    {
-      src: tonguePic,
-      caption: "Amo sua companhia",
-      aspectRatio: "9/13",
-    },
-    {
-      src: roofPic,
-      caption: "Amo sua risada",
-      aspectRatio: "9/13",
-    },
-    {
-      src: sunsetPic,
-      caption: "Amo seu sorriso",
-      aspectRatio: "9/13",
-    },
-    {
-      src: parkPic,
-      caption: "Amo estar com você",
-      aspectRatio: "9/13",
-    },
-  ];
-
   const timelineContent = {
     title: "Tempo desde que te conheci",
     subheading: "O tempo voa quando a gente está junto.",
@@ -112,12 +89,6 @@ const BeforeAnniversary = () => {
       "Meu bem, viver cada dia com você tem tornado meus dias melhores, deixado o mundo mais vivo e mais bonito. Todos os dias me apaixono mais por você, seu jeito, seu olhar, sua forma de pensar. Nunca canso de pensar em você, de te admirar, de estar com você. Quero continuar construindo memórias incríveis ao seu lado.",
     footnote: "Eu te amo!",
   };
-
-  const timelineEntries = Object.entries(timelineContent.data).filter(
-    ([, value]) => value > 0
-  );
-
-  const questionTitle = "Quer namorar comigo?";
 
   const handleNoHover = () => {
     const btnNao = document.querySelector("#btn-nao");
@@ -166,12 +137,14 @@ const BeforeAnniversary = () => {
           <h1 className="text-2xl lg:text-5xl font-bold text-[#4A1D1F] align-middle ">
             Nosso cantinho
           </h1>
+          <button onClick={onToggle} className="transition-transform duration-300 hover:scale-110">
           <Heart
             width={48}
             height={48}
             className="text-[#ff8fa3]"
             fill="#FF8FA3"
-          />
+            />
+            </button>
         </div>
         <p className="text-lg text-[#674846] text-center">
           Memórias pra nossa vida
